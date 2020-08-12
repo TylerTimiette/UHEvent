@@ -10,7 +10,6 @@ public class SkyWarsLoot extends Loot {
     public void initiate() {
 
         chestInventory.put(new ItemStack(Material.LEATHER_HELMET, 1), 40.0);
-
         chestInventory.put(new ItemStack(Material.DIAMOND_CHESTPLATE,1), 25.0);
         chestInventory.put(new ItemStack(Material.IRON_LEGGINGS,1), 25.0);
         chestInventory.put(new ItemStack(Material.IRON_BOOTS,1), 25.0);
