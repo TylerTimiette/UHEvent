@@ -1,36 +1,34 @@
 package com.timiette.listeners;
 
-import com.timiette.utils.ChestManager;
+import com.timiette.loottables.SkyWarsLoot;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
+import org.bukkit.block.Chest;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.inventory.Inventory;
 
-import static org.bukkit.Material.CHEST;
-import static org.bukkit.Material.ENDER_CHEST;
+import static org.bukkit.Material.*;
 
 public class OpenedChest implements Listener {
     @EventHandler
     public void playerInteractEvent(PlayerInteractEvent e) {
-        switch(e.getClickedBlock().getType()) {
-            case CHEST:
-                //do something
-            case ENDER_CHEST:
-                //do something
-            default: break;
+        if (e.getClickedBlock().getType().equals(Material.CHEST)) {
+            e.setCancelled(true);
+            Chest chest = (Chest) e.getClickedBlock().getState();
+            //if(config.contains(e.getClickedBlock().getLocation(); we do shit
 
-            }
+            openGennedInv(e.getPlayer(), chest, 0);
         }
+    }
 
-        public void openedGennedInv(Player player, Block b) {
-        if(!ChestManager.get().containsKey(b.getLocation())) {
+        public void openGennedInv(Player player, Chest chest, int level) {
+            SkyWarsLoot sl = new SkyWarsLoot();
 
-            if(b.getType().equals(ENDER_CHEST)) {
-
-            }
-        }
+            sl.populateChest(chest.getInventory());
+            chest.update();
 
     }
 }

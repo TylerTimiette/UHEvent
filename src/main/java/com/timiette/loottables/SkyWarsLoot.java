@@ -1,11 +1,8 @@
 package com.timiette.loottables;
 
-import com.timiette.utils.ChestManager;
 import org.bukkit.Material;
-import org.bukkit.entity.Item;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import org.graalvm.compiler.graph.Graph;
 
 import java.util.ArrayList;
 import java.util.HashMap;
