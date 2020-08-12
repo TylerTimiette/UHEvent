@@ -13,9 +13,15 @@
     <description>events</description>
 
     <developers>
+
         <developer>
             <name>Timiette</name>
         </developer>
+
+        <developer>
+            <name>Naritai</name>
+        </developer>
+
     </developers>
 
     <properties>
@@ -66,6 +72,7 @@
             <id>destroystokyo-repo</id>
             <url>https://repo.destroystokyo.com/repository/maven-public//</url>
         </repository>
+
         <repository>
             <id>Scarsz-Nexus</id>
             <url>https://nexus.scarsz.me/content/groups/public/</url>
@@ -80,17 +87,7 @@
             <version>1.16.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>com.discordsrv</groupId>
-            <artifactId>discordsrv</artifactId>
-            <version>1.16.6</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.10</version>
-        </dependency>
+
 
     </dependencies>
 </project>

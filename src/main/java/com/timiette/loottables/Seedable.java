@@ -2,7 +2,7 @@ package com.timiette.loottables;
 
 import java.util.Random;
 
-public class SeedableGame {
+public class Seedable {
 
     int seed = 0;
     public void resetSeed() {
