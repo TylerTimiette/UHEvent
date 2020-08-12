@@ -16,7 +16,7 @@ public class OpenedChest implements Listener {
     @EventHandler
     public void playerInteractEvent(PlayerInteractEvent e) {
         if (e.getClickedBlock().getType().equals(Material.CHEST)) {
-            e.setCancelled(true);
+
             Chest chest = (Chest) e.getClickedBlock().getState();
             //if(config.contains(e.getClickedBlock().getLocation(); we do shit
 
