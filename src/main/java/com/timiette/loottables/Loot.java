@@ -1,5 +1,6 @@
 package com.timiette.loottables;
 
+import com.timiette.utils.Seedable;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 

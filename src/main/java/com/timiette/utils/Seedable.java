@@ -1,4 +1,4 @@
-package com.timiette.loottables;
+package com.timiette.utils;
 
 import java.util.Random;
 

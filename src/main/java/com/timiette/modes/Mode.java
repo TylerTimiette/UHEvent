@@ -2,16 +2,16 @@ package com.timiette.modes;
 
 import com.timiette.Main;
 import com.timiette.loottables.Loot;
-import com.timiette.loottables.Seedable;
+import com.timiette.utils.Seedable;
 import org.bukkit.World;
 import org.bukkit.WorldCreator;
 import org.bukkit.WorldType;
 import org.bukkit.scheduler.BukkitRunnable;
 
-public class Mode extends Loot {
+public class Mode {
 
     boolean PVP;
-
+    int pointsForKill;
     public Boolean isPVPEnabled() {
         return PVP;
     }
@@ -20,17 +20,20 @@ public class Mode extends Loot {
 
 
     public void setPVP(boolean b) {
-
+        PVP = b;
     }
 
+    public void setPointsForKill(int i) {
+        pointsForKill = i;
+    }
+
+    public int getPointsForKill() {
+        return pointsForKill;
+    }
 
 
     public void generateWorld(String mode) {
         //When a new round is started, we don't want the old worlds to hang around. We need a command to unload worlds.
-
-
-
-
         WorldCreator wc = new WorldCreator(mode);
         wc.environment(World.Environment.NORMAL);
         //We get the current seed
